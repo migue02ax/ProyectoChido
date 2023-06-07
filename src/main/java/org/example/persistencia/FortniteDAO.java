@@ -68,7 +68,7 @@ public class FortniteDAO implements InterfazDAO {
             case 3:
                 sqlDelete = "UPDATE fortnite SET baile = ? WHERE id = ? ;";
                 pstm = ConexionSingleton.getInstance("fortniteDB.db").getConnection().prepareStatement(sqlDelete);
-                pstm.setDouble(1, (Double)obj);
+                pstm.setString(1, (String)obj);
                 pstm.setInt(2, id);
                 rowCount = pstm.executeUpdate();
                 break;

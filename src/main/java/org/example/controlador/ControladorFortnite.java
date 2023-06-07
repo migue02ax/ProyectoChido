@@ -110,7 +110,7 @@ public class ControladorFortnite extends MouseAdapter {
                 }
                 //Para actualizar las casillas que poseen datos Double:
             }catch (ClassCastException cce){
-                Object o = Double.parseDouble(this.view.getTxtActualizar().getText());
+                Object o = this.view.getTxtActualizar().getText();
                 int index = this.view.getTblFortnite().getSelectedRow();
                 int id = modelo.getFortniteAtIndex(index).getId();
                 int columna = this.view.getTblFortnite().getSelectedColumn();
